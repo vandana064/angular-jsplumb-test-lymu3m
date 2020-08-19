@@ -1,0 +1,12 @@
+<!-- <div class="node" id="{{node.id}}" [style.top.px]="node.top || 0" [style.left.px]="node.left || 20">
+  {{node.id}}
+  </div> -->
+
+<div class="node mat-elevation-z4" [attr.id]="node.id" [style.top.px]="node.top || 0" [style.left.px]="node.left || 20">
+	<div class="q-title" [attr.id]="node.id+'-title'" >
+		{{node.title}}
+	</div>
+	<div *ngFor="let response of rows; let i=index" [attr.id]="node.id+i" class="response-option">
+		{{response}}
+	</div>
+</div>
